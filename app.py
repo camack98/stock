@@ -12,7 +12,7 @@ def hello():
 @app.route('/hello/<variable>', methods=['GET'])
 def hi(variable): # cannot have 2 functions with the same name
     val = int(variable)**2
-    return f'<HTML>Hi. {variable} ^ 2 = {val}</HTML>'
+    return f'<HTML>Hi. Squared calculator: {variable} ^ 2 = {val}</HTML>'
 
 
 @app.route('/get_stock_val/<ticker>', methods=['GET'])
