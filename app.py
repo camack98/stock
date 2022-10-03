@@ -9,10 +9,10 @@ app = Flask(__name__)
 def hello():
     return f'Hello Cam, you should use a better route:!\nEX: get_stock_val/<ticker>\n'
 
-@app.route('/hello')
-def hi(): # cannot have 2 functions with the same name
-    val = 3*2
-    return f'<HTML>Hi. Value = {val}</HTML>'
+@app.route('/hello/<variable>', methods=['GET'])
+def hi(variable): # cannot have 2 functions with the same name
+    val = int(variable)**2
+    return f'<HTML>Hi. {variable} ^ 2 = {val}</HTML>'
 
 
 @app.route('/get_stock_val/<ticker>', methods=['GET'])
