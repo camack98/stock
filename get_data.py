@@ -14,6 +14,7 @@ data_dir = Path('data')
 str_now = datetime.datetime.now().strftime('%Y_%m_%d')
 list_ticker_snp_500 = si.tickers_sp500()
 
+# Test
 for ticker in list_ticker_snp_500:
     log.warning(f'downloading {ticker}')
     try:
