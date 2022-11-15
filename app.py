@@ -13,7 +13,8 @@ def hello_world():  # put application's code here
 def get_stock_value(ticker):
     # result = get_SNP500(ticker)
     # bl = create_business_logic()
-    prediction = get_prediction(ticker)
+    ticker = ticker.upper()  # Convert to uppercase to allow lowercase user input
+    prediction = get_prediction(ticker, '30_day_average')
     return f'{prediction}\n'
 
 if __name__ == '__main__':
