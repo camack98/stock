@@ -11,10 +11,8 @@ def hello_world():  # put application's code here
 
 @app.route('/get_stock_val/<ticker>', methods=['GET'])
 def get_stock_value(ticker):
-    # result = get_SNP500(ticker)
-    # bl = create_business_logic()
     ticker = ticker.upper()  # Convert to uppercase to allow lowercase user input
-    prediction = get_prediction(ticker, '30_day_average')
+    prediction = get_prediction(ticker, 'logistic_regression')
     return f'{prediction}\n'
 
 if __name__ == '__main__':
